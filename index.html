@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	</title>
+</head>
+<body>
+<!-- 
+class Dot {
+    constructor(x, y){
+        this.x = x;
+        this.y = y;
+    }
+    showLocation(){
+        // ES6 String Interpolation!
+        console.log(`This Dot is at x ${this.x} and y ${this.y}`);
+    }
+}
+let dot2 = new Dot(5, 13);
+dot2.showLocation();
+ -->
+	<script>
+	class Ninja {
+		constructor(name){
+			this.name=name;
+			this.health=100;
+			this.speed=3;
+			this.strength=3;
+		}
+		sayName(){
+			console.log(`Hi my name is ${this.name}`)
+		}
+		showStats(){
+			console.log(`Ninja: ${this.name}, Health: ${this.health}, Speed: ${this.speed}, Strength: ${this.strength}`)
+		}
+		drinkSake(){
+			this.health+=10;
+		}
+	}
+
+	let ninja1 = new Ninja("Mike");
+
+	class Sensei extends Ninja {
+		constructor(name){
+			super(name);
+			this.health+=100;
+			this.speed+=7;
+			this.strength+=7;
+			this.wisdom=10;
+		}
+
+		drinkSenseiSake(){
+			super.drinkSake();
+		}
+		speakWisdom(){
+			this.drinkSenseiSake();
+			console.log("What one programmer can do in one month, two programmers can do in two months.")
+		}
+	}
+
+	let sensei1 = new Sensei('Shane');
+	sensei1.speakWisdom();
+	sensei1.showStats();
+	</script>
+</body>
+</html>
